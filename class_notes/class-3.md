@@ -24,15 +24,22 @@ Note: remove this env if you wish to set up DevOps environment using ansible
 
 1. setup ansible, Jenkins master, and slave using terraform
 2. install ansible server
+``` sudo amazon-linux-extras install ansible2 ```
 3. create hosts file in /opt
 4. create ansible.cfg file in the /opt
+```vi /etc/ansible/ansible.cfg
+   host_key_checking = False 
+```
 5. copy ssh private keys on /opt onto ansible
 6. test the connection using
-   ```ssh
-     ansible all -m ping
+   ```
+     ansible -i hosts all -m ping
   ```
 7. clone ansible scripts from rtp-03/ansible
 8. run jenkins post install.yml on jenkins master node
+``` ansible-playbook -i hosts <.yml file> --check //Dry run
+    ansible-playbook -i hosts <.yml file>
+```
 9. run slave-setup.yml on jenkins salve
 
 ### Setup jenkins master and slave

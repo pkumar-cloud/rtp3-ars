@@ -1,3 +1,4 @@
+// to retrive the resource details. 
 output "vpc-name" {
     description = "this is vpc id"
     value = "${aws_vpc.rtp03-vpc.id}"
