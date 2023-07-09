@@ -2,7 +2,7 @@
 FROM tomcat:latest
 
 # Maintainer
-MAINTAINER "Valaxy Technologies - DevOps-Realtime" 
+MAINTAINER "pkumar-cloud" 
 
 # copy war file on to container 
 COPY app/target/login-release.war /usr/local/tomcat/webapps/login.war

@@ -2,7 +2,7 @@
 
 As we are setting up jenkins on docker we should install docker also we are exposing jenkins to external using nginx port number 4000
 
-1. run jenkins post-install.sh file to setup docker, and docker compose
+1. run jenkins-post-install.sh file on master to setup docker, and docker compose
 2. to provision jenkins and nginx as a container we should have docker-compose and nginx.conf files.
 3. run docker-compose up  
   ```sh
@@ -12,7 +12,7 @@ As we are setting up jenkins on docker we should install docker also we are expo
 
 ### Setup Jenkins slave node
 To setup we need java, docker, maven, and GitHub on salve system
-1. clone slave-setup.sh from rtp-03
+1. clone slave-setup.sh from rtp3-ars
 2. run it to setup salve system
 
 ### Setup jenkins master and slave
@@ -26,16 +26,16 @@ Note: remove this env if you wish to set up DevOps environment using ansible
 2. install ansible server
 ``` sudo amazon-linux-extras install ansible2 ```
 3. create hosts file in /opt
-4. create ansible.cfg file in the /opt
+4. create new or edit ansible.cfg file in the /opt
 ```vi /etc/ansible/ansible.cfg
-   host_key_checking = False 
+   host_key_checking = False //Make it false to avoid checking ssh first time connect message
 ```
 5. copy ssh private keys on /opt onto ansible
 6. test the connection using
    ```
      ansible -i hosts all -m ping
   ```
-7. clone ansible scripts from rtp-03/ansible
+7. clone ansible scripts from rtp3-ars/ansible
 8. run jenkins post install.yml on jenkins master node
 ``` ansible-playbook -i hosts <.yml file> --check //Dry run
     ansible-playbook -i hosts <.yml file>

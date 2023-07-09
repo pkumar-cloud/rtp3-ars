@@ -10,7 +10,7 @@
 download vs code latest version from [here](https://code.visualstudio.com/download) and install it.
 
 ## Source code 
-To build code on the local system we need source code. You can find login app source code [here](https://github.com/ravdy/loginapp)
+To build code on the local system we need source code. You can find login app source code [here](https://github.com/pkumar-cloud/rtp3-ars/tree/main/loginapp)
 
 ## Git
 To download source code from GitHub we should have git bash on local system 
