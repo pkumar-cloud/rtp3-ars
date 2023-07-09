@@ -1,4 +1,4 @@
-# DevOps Project Workshop by Valaxy Technologies
+# DevOps Project Demo - RTP3
 
 In this project we are going cover
 
