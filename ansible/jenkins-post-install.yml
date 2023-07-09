@@ -40,8 +40,8 @@
         dest: /opt/
         mode: '0755'
       with_items:
-        - /opt/RTP-03/docker-compose.yaml
-        - /opt/RTP-03/nginx.conf
+        - /opt/rtp3-ars/docker-compose.yaml
+        - /opt/rtp3-ars/nginx.conf
 
     - name: run docker compose service
       shell:
