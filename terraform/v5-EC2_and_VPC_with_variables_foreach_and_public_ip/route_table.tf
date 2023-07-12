@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 // Create a route table 
 resource "aws_route_table" "rtp03-public-rt" {
     vpc_id = "${aws_vpc.rtp03-vpc.id}"

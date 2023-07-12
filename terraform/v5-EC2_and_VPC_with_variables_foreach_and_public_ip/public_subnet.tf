@@ -1,5 +1,3 @@
-
-
 // Creatomg a Subnet 
 resource "aws_subnet" "rtp03-public_subent_01" {
     vpc_id = "${aws_vpc.rtp03-vpc.id}"
